@@ -4,6 +4,6 @@
   <span>一个简洁的Hexo主题</span>
 </div>
 <hr>
-Demo: [https://theme.yuanning0818.tk](https://theme.yuanning0818.tk)
+Demo: <a href="https://theme.yuanning0818.tk">https://theme.yuanning0818.tk</a>
 
 文档： 准备中...
