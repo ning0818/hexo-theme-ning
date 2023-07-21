@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="https://npm.elemecdn.com/@waline/client@v2/dist/waline.css"/>
+<div id="waline"></div>
+<script type="module">
+  import { init } from 'https://npm.elemecdn.com/@waline/client@v2/dist/waline.mjs';
+
+  init({
+    el: '#waline',
+    serverURL: '<%- url_for(theme.waline.url) %>',
+  });
+</script>

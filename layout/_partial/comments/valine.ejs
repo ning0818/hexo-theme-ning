@@ -1,0 +1,10 @@
+<script src='https://npm.elemecdn.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '<%- url_for(theme.valine.appid) %>',
+            appKey: '<%- url_for(theme.valine.appkey) %>'
+        })
+    </script>
+</body>

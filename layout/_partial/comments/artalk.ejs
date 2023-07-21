@@ -1,0 +1,12 @@
+<link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+    el:        '#Comments', 
+    pageKey:   '', 
+    pageTitle: '',  
+    server:    '<%- url_for(theme.artalk.url) %>',  
+    site:      '<%= config.title %>', 
+})
+</script>

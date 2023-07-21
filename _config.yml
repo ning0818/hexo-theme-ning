@@ -69,3 +69,11 @@ sidenavmain:
 #################################评论#################################
 artalk:
   url: https://artalk.example.com
+waline:
+  url: https://waline.example.com
+twikoo:
+  envid:  #腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+  region:  #环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+valine:
+  appid: qwuyxtzv7f93q86g9836gz9f
+  appkey: q9z8634gnf98yg43qn64n9gf68gq9f84
