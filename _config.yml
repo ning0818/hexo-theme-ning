@@ -77,3 +77,9 @@ twikoo:
 valine:
   appid: qwuyxtzv7f93q86g9836gz9f
   appkey: q9z8634gnf98yg43qn64n9gf68gq9f84
+
+#################################CDN#################################
+cdn:
+  github: https://cdn2.chuqis.com/gh/
+  npm: https://npm.elemecdn.com/
+  cdnjs: https://cdn.bootcdn.net/ajax/libs/
