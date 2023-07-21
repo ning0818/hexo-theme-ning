@@ -1,0 +1,69 @@
+<div class="AfruxWidgets-sideNavAlt AfruxWidgets-WidgetSection">
+    <div class="AfruxWidgets-Widget welcomebox-widget">
+        <div class="AfruxWidgets-Widget-content">
+            <div class="containerwb">
+                <div class="backgrwb">
+                    <div><a href="/">
+                            <div class="avatarwb">
+                                <div class="AvatarEditor Dropdown">
+                                    <!--侧栏logo-->
+                                    <img loading="eager" class="Avatar" src="<%- url_for(theme.infor.logo) %>" alt="">
+                                    <!--侧栏logo end-->
+                                    <ul class="Dropdown-menu Menu">
+                                        <li class="item-upload"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-upload Button-icon"></i><span class="Button-label">上传</span></button></li>
+                                        <li class="item-remove"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label">移除</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="contentwb">
+                        <div class="textinfo"><strong><span class="username"><%= config.title %></span></strong></div>
+                        <div class="cont">
+                            <div class="circletop">
+                                <% for (let i in theme.sidenav) { %>
+                                    <% let sidenav = theme.sidenav[i]; %>
+                                    <a href="<%- url_for(sidenav.url) %>" title="<%= i %>">
+                                        <i class="<%= sidenav.icon %>"></i>
+                                    </a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iconbadge"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% for (let i in theme.sidenavmain) { %>
+        <% let sidenavmain = theme.sidenavmain[i]; %>
+        <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
+            <div class="AfruxWidgets-Widget-title">
+                <span class="AfruxWidgets-Widget-title-icon">
+                    <i aria-hidden="true" class="<%= sidenavmain.icon %>"></i>
+                </span>
+                <span class="AfruxWidgets-Widget-title-label"><%= i %></span>
+                <div class="AfruxWidgets-Widget-title-desc">
+                </div>
+            </div>
+            <div class="AfruxWidgets-Widget-content">
+                <p><%= sidenavmain.word %></p>
+            </div>
+        </div>
+    <% } %>
+    <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
+        <div class="AfruxWidgets-Widget-title">
+            <span class="AfruxWidgets-Widget-title-icon">
+                <i aria-hidden="true" class="bi bi-alexa"></i>
+            </span>
+            <span class="AfruxWidgets-Widget-title-label">统计</span>
+            <div class="AfruxWidgets-Widget-title-desc">
+            </div>
+        </div>
+        <div class="AfruxWidgets-Widget-content">
+            <div class="Afrux-ForumStatsWidget-grid">
+                    <p>访客数<span id="busuanzi_value_site_uv"></span>人</p>
+                    <p>访问量<span id="busuanzi_value_site_pv"></span>次</p>
+        </div>
+    </div>
+</div>
+<div class="AfruxWidgets-bottomWidgetSection AfruxWidgets-WidgetSection"></div>

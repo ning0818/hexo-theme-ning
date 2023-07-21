@@ -1,0 +1,75 @@
+<title><%= page.title %> | <%= config.title %></title>
+<link href="https://cdn2.chuqis.com/gh/Fgaoxing/blog-cdn@main/grid.css" rel="stylesheet">
+<style>
+main .card {
+    padding: 30px;
+    margin: 8px;
+}
+main>.card>div pre, main>.card>div span {
+    width: 100%;background-color: #e2e2e2;padding: 10px;border-radius: 5px;overflow: auto;
+}
+</style>
+<main class="App-content">
+    <div id="content">
+        <div class="IndexPage">
+            <div class="container">
+                <div class="sideNavContainer">
+                    <div class="IndexPage-results sideNavOffset">
+                        <div class="card">
+                        <h1>404 | <%= page.title %></h1>
+                        </div>
+                        <div class="card">
+                                <link rel="stylesheet" href="/css/link.css">
+                                <body data-type="404" class="pace-done pace-done pace-done" style="overflow: auto;">
+                                    <div id="web_box">
+                                        <div id="web_container">
+                                            <div class="error" id="body-wrap">
+                                                <div class="error-box">
+                                                    <div id="error-wrap">
+                                                        <div class="error-content">
+                                                            <div class="error-img" style="background-image: url('https://bu.dusays.com/2023/05/08/645907596997d.gif')"></div>
+                                                            <div class="error-info">
+                                                                <h1 class="error_title">404</h1>
+                                                                <div class="error_subtitle">可能是文章被删除或输入有误</div>
+                                                                <a class="button--animated" href="/" draggable="false" data-pjax-state=""><i class="bi bi-airplane-fill"></i>回到主页</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <%- partial('_partial/sidenav') %>
+                </div>
+            </div>
+        </div>
+    <div id="flarum-loading" style="display: none;">
+        正在加载…
+    </div>
+    <noscript>
+        <div class="Alert">
+            <div class="container">
+                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+            </div>
+        </div>
+    </noscript>
+    <div class="App-composer">
+        <div class="container">
+            <div id="composer">
+                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
+                    <div class="Composer-handle" style="cursor: row-resize;"></div>
+                    <ul class="Composer-controls">
+                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
+                    </ul>
+                    <div class="Composer-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+</body>

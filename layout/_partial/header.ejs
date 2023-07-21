@@ -1,0 +1,54 @@
+<body class="no-touch">
+    <div id="app" class="App affix App--index" style="min-height: 744px;" aria-hidden="false">
+
+        <div id="app-navigation" class="App-navigation">
+            <div class="Navigation ButtonGroup App-backControl"><button class="Button Button--icon Navigation-drawer hasIcon" type="button" aria-label="打开导航抽屉"><i aria-hidden="true" class="icon fas fa-bars Button-icon"></i><span class="Button-label"></span></button></div>
+        </div>
+
+        <div id="drawer" class="App-drawer">
+
+            <header id="header" class="App-header navbar-fixed-top">
+                <div id="header-navigation" class="Header-navigation">
+                    <div class="Navigation ButtonGroup"></div>
+                </div>
+                <div class="container">
+                    <div class="Header-title">
+                        <a href="/" id="home-link">
+                            <!--顶栏logo-->
+                            <img src="<%- url_for(theme.infor.logo) %>" alt="首页" class="Header-logo">
+                            <!--顶栏logo end-->
+                        </a>
+                    </div>
+                    <div id="header-primary" class="Header-primary">
+                        <ul class="Header-controls">
+                            <!--顶栏内容-->
+                            <% for (name in theme.menu) { %>
+                            <li class="item-link4">
+                                <a class="LinksButton Button Button--link active" href="<%- url_for(theme.menu[name]) %>">
+                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
+                                    <span class="LinksButton-title"><%= name %></span>
+                                </a>
+                            </li>
+                            <% } %>
+                            <!--顶栏内容 end-->
+                        </ul>
+                    </div>
+                    <div id="header-secondary" class="Header-secondary">
+                        <ul class="Header-controls">
+                            <% for (let i in theme.menuright) { %>
+                                <% let menuright = theme.menuright[i]; %>
+                                <li class="item-nightmode">
+                                    <button class="Button Button--flat hasIcon" type="button">
+                                        <a href="<%- url_for(menuright.url) %>">
+                                        <i aria-hidden="true" class="<%= menuright.icon %>"></i>
+                                        <span class="Button-label"><%= i %></span>
+                                        </a>
+                                    </button>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+        </div>

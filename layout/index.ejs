@@ -1,0 +1,131 @@
+<title><%= config.title %></title>
+<main class="App-content">
+    <div id="content">
+        <div class="IndexPage">
+            <div class="container">
+                <div class="sideNavContainer">
+                    <nav class="IndexPage-nav sideNav">
+                        <ul>
+                            <li class="item-nav">
+                                <div class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount12"><button class="Dropdown-toggle Button" aria-haspopup="menu" aria-label="导航栏下拉菜单开关" data-toggle="dropdown"><span class="Button-label">全部主题</span><i aria-hidden="true" class="icon fas fa-sort Button-caret"></i></button>
+                                    <ul class="Dropdown-menu dropdown-menu ">
+                                        <% for (let i in theme.sidetag) { %>
+                                            <% let sidetag = theme.sidetag[i]; %>
+                                            <li class="item-allDiscussions active">
+                                                <a class="hasIcon" href="<%- url_for(sidetag.url) %>" active="true">
+                                                    <i aria-hidden="true" class="<%= sidetag.icon %>"></i>
+                                                    <span class="Button-label"><%= i %></span>
+                                                </a>
+                                            </li>
+                                        <% } %>
+                                        <li class="Dropdown-separator"></li>
+                                        <hr>
+                                        <% for (let i in theme.classification) { %>
+                                            <% let classification = theme.classification[i]; %>
+                                            <li class="item-tag1">
+                                                <a class="TagLinkButton hasIcon" href="<%- url_for(classification.url) %>" title="<%= i %>" style="--color: #00b7ff;">
+                                                    <i class="<%= classification.icon %>" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
+                                                    <span class="Button-label"><%= i %></span>
+                                                </a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-startBottomWidgetSection">
+                                <div class="AfruxWidgets-startBottom AfruxWidgets-WidgetSection"></div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="IndexPage-results sideNavOffset">
+                        <div class="DiscussionList">
+                            <ul role="feed" class="DiscussionList-discussions">
+                                <% page.posts.each(function (post) { %>
+                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
+                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
+                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="<%= config.title %> 发布于 3 天前" data-original-title="<%= config.title %> 发布于 3 天前"><img class="Avatar" loading="lazy" src="<%- url_for(theme.infor.logo) %>" alt=""></a><a href="<%- url_for(post.path) %>" class="DiscussionListItem-main">
+                                                <h2 class="DiscussionListItem-title"><%= post.title %></h2>
+                                                <ul class="DiscussionListItem-info">
+                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
+                                                    <hr>
+                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
+                                                    <li class="item-excerpt">
+                                                        <div><%- date(post.date, "YYYY-MM-DD") %></div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                    <%- partial('_partial/sidenav') %>
+                </div>
+            </div>
+        </div>
+
+    <div id="flarum-loading" style="display: none;">
+        正在加载…
+    </div>
+
+    <noscript>
+        <div class="Alert">
+            <div class="container">
+                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+            </div>
+        </div>
+    </noscript>
+
+    <div class="App-composer">
+        <div class="container">
+            <div id="composer">
+                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
+                    <div class="Composer-handle" style="cursor: row-resize;"></div>
+                    <ul class="Composer-controls">
+                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
+                    </ul>
+                    <div class="Composer-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</div>
+<% if (page.total > 0) { %>
+    <div class="posts-ls cm9 c9 p9 m12">
+    <div class="btns" style="margin: auto;width: min-content;">
+        <% if (page.prev > 0) { %>
+            <a class="btn" href="/<%= page.prev_link %>"> <i class="bi bi-arrow-left"></i> </a>
+        <% } %>
+        <div class="btn"> <%= page.current %> </div>
+        <% if (page.next > 0) { %>
+            <a class="btn" href="/<%= page.next_link %>"> <i class="bi bi-arrow-right"></i> </a>
+        <% } %>
+    </div>
+    </div>
+<% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

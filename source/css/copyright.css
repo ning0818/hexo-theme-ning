@@ -1,0 +1,32 @@
+.share.card .copyright {
+	background:#d7d6d6;
+	padding:5px 15px;
+	margin:0;
+	border-radius:5px;
+	overflow:hidden;
+	position:relative;
+	margin:10px
+}
+.share.card .copyright i.icon {
+	position:absolute;
+	right:-15px;
+	font-size:70px;
+	color:#bababa;
+	z-index:0;
+	top:-15px
+}
+.share.card .copyright .text {
+	z-index:10;
+	position:relative;
+	font-weight:700;
+	color:#37475b
+}
+.share.card .dark .copyright {
+	background-color:#0f172a
+}
+.share.card .dark .copyright i.icon {
+	color:#323c4a
+}
+.share.card .dark .copyright .text {
+	color:rgba(255,255,255,.859)
+}

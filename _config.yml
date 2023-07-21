@@ -1,0 +1,71 @@
+# see https://github.com/ning0818/hexo-theme-ning
+
+
+#################################个人信息#################################
+
+infor:
+  logo: https://www.yuanning0818.tk/logo.png #徽标
+
+#################################顶部导航栏#################################
+
+#顶部导航栏-左侧
+menu:
+  首页: /
+  标签: /tags/
+
+#顶部导航栏-右侧小图标
+menuright:
+  首页:
+    url: /
+    icon: bi bi-house-door
+  Github:
+    url: https://github.com/ning0818/
+    icon: bi bi-github
+
+#################################侧边栏#################################
+
+#侧边-左侧-上部
+sidetag:
+  首页:
+    url: /
+    icon: bi bi-house-door
+  rss:
+    url: /atom.xml
+    icon: bi bi-rss
+  朋友圈:
+    url: /moments/
+    icon: bi bi-share
+
+#侧边-左侧-下部
+classification:
+  友人帐:
+    url: /link/
+    icon: bi bi-people-fill
+  rss:
+    url: /atom.xml
+    icon: bi bi-rss
+  朋友圈:
+    url: /moments/
+    icon: bi bi-share
+  文坛:
+    url: /fcircle/
+    icon: bi bi-people
+
+#侧边-右侧-个人卡片-下方
+sidenav:
+  关于:
+    url: /about/
+    icon: bi bi-file-earmark-person-fill
+  Github:
+    url: /about/
+    icon: bi bi-github
+
+#侧边栏
+sidenavmain:
+  公告:
+    icon: bi bi-bell-fill
+    word: 这是一个公告
+
+#################################评论#################################
+artalk:
+  url: https://artalk.example.com

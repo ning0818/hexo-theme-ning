@@ -1,0 +1,82 @@
+<title><%= page.title %> | <%= config.title %></title>
+<style>
+main .card {
+    padding: 30px;
+    margin: 8px;
+}
+main>.card>div pre, main>.card>div span {
+    width: 100%;background-color: #e2e2e2;padding: 10px;border-radius: 5px;overflow: auto;
+}
+</style>
+<main class="App-content">
+    <div id="content">
+        <div class="IndexPage">
+            <div class="container">
+                <div class="sideNavContainer">
+                    <div class="IndexPage-results sideNavOffset">
+                        <div class="card">
+                        <h1><%= page.title %></h1>
+                        </div>
+                        <div class="card">
+                        <p><%- page.content %></p>
+                        </div>
+                        <div class="share card">
+                            <link rel="stylesheet" class="nightmode" href="/css/copyright.css">
+                            <div class="copyright">
+                                <i class="bi bi-c-circle icon"></i>
+                                <div class="text">
+                                    <br>
+                                    <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+                                    <p>本文永久链接是：<a href="<%= page.permalink %>"><%= page.permalink %></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2><i class="bi bi-chat-fill"></i> 评论</h2>
+                            <link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.css" rel="stylesheet">
+                            <script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.js"></script>
+                            <div id="Comments"></div>
+                            <script>
+                            Artalk.init({
+                                el:        '#Comments',                // 绑定元素的 Selector
+                                pageKey:   '',                  // 固定链接 (留空自动获取)
+                                pageTitle: '',  // 页面标题 (留空自动获取)
+                                server:    '<%- url_for(theme.artalk.url) %>',  // 后端地址
+                                site:      '<%= config.title %>',             // 你的站点名
+                            })
+                            </script>
+                        </div>
+                    </div>
+                    <%- partial('_partial/sidenav') %>
+                </div>
+            </div>
+        </div>
+    <div id="flarum-loading" style="display: none;">
+        正在加载…
+    </div>
+    <noscript>
+        <div class="Alert">
+            <div class="container">
+                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+            </div>
+        </div>
+    </noscript>
+    <div class="App-composer">
+        <div class="container">
+            <div id="composer">
+                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
+                    <div class="Composer-handle" style="cursor: row-resize;"></div>
+                    <ul class="Composer-controls">
+                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
+                    </ul>
+                    <div class="Composer-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+</body>

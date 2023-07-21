@@ -1,0 +1,64 @@
+/*btn*/
+.btn {
+	padding:.75rem;
+	box-shadow:0 0 20px 0 rgb(0 0 0 / 1%);
+	border-radius:5px;
+	border:1px solid #E5E7EBFF;
+	background-color:#fff;
+	outline:none;
+	font-weight:bold;
+	color:#4B5563
+}
+.dark .btn {
+	background-color:#0f172a;
+	color:#fffab;
+	border:1px solid #374151
+}
+.btns {
+	display:flex;
+	border-radius:5px;
+	color:#000;
+	font-size:.875rem;
+	overflow:hidden;
+	margin:.5em;
+	outline:none;
+	width:calc(100% - 1em - 2px);
+	border:.5px solid #E5E7EB;
+	border-bottom-width:1px;
+	border-top-width:1px
+}
+.btns .input,.btns .btn {
+	border-radius:0;
+	margin:0;
+	border-left:.5px solid #E5E7EB!important;
+	border-right:.5px solid #E5E7EB!important;
+	border-top:0!important;
+	border-bottom:0!important
+}
+.dark .btns .input,.dark .btns .btn {
+	border-left:.5px solid #374151!important;
+	border-right:.5px solid #374151!important
+}
+.dark .btns,.dark .btnls {
+	border:.5px solid #374151!important
+}
+
+/*card*/
+.dark .card {
+	background:#1f2937;
+	color:#fff
+}
+.card {
+	background:#fff;
+	border-radius:5px;
+	overflow:hidden;
+	color:#334155;
+	box-shadow:0 0 20px 0 rgb(0 0 0 / 8%)
+}
+* {
+	transition:all 1s,color 400ms,background 400ms,filter 300ms
+}
+.grid {
+	display:flex;
+	flex-wrap:wrap
+}
