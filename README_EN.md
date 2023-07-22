@@ -1,7 +1,7 @@
 <div align="right">
   language:
   <a title="English" href="/README.md">中文</a>
-  Enhlish
+  English
 </div>
 
 Preview: 👍 [Ning](https://theme.yuanning0818.tk/)
