@@ -35,6 +35,7 @@ theme: Ning
 ## 更好的配置
 
 - macos/linux
+ 
   在博客根目录运行
 
 ```bash
@@ -42,6 +43,7 @@ cp -rf ./themes/Ning/_config.yml ./_config.Ning.yml
 ```
 
 - windows
+  在博客根目录运行
 ```cmd
 copy themes\ning\_config.yml .\ && del themes\ning\_config.yml && ren _config.yml _config.Ning.yml
 ```
