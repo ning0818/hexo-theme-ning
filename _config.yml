@@ -5,6 +5,20 @@
 
 infor:
   logo: https://www.yuanning0818.tk/logo.png #徽标
+  qexourl: https://admin.ning0818.top
+  xieyi: 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)
+  qexokey: #人机验证秘钥，没有的不填
+
+friends:
+  name: 阳光下的小宁宁
+  url: https://ning0818.top
+  logo: https://jsd.onmicrosoft.cn/gh/ning0818/cdn-files@blogcdn/logo.webp
+  describe: 一个少年的博客
+
+#################################TianliGPT#################################
+TianliGPT:
+  enable: true
+  key: 5Q5mpqRK5DkwT1X9Gi5e
 
 #################################顶部导航栏#################################
 
@@ -68,9 +82,9 @@ sidenavmain:
 
 #################################评论#################################
 artalk:
-  url: https://artalk.example.com
+  url: https://artalk.ning0818.top
 waline:
-  url: https://waline.example.com
+  url: https://waline.ning0818.top
 twikoo:
   envid:  #腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
   region:  #环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填

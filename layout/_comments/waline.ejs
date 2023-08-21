@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+<div id="comments"></div>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+  init({
+    el: '#comments',
+    serverURL: '<%- url_for(theme.waline.url) %>',
+  });
+</script>
