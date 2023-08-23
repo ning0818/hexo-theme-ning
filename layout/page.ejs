@@ -1,0 +1,36 @@
+<title><%= page.title %> | <%= config.title %></title>
+<main class="App-content">
+    <div id="content">
+        <div class="IndexPage">
+            <div class="container">
+                <div class="sideNavContainer">
+                    <div class="IndexPage-results sideNavOffset">
+                        <div id="post">
+                        <div class="card" id="title">
+                        <h1><%= page.title %></h1>
+                        </div>
+                        <div class="card" id="post-body">
+                        <p><%- page.content %></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <h2><i class="bi bi-chat-fill"></i> 评论</h2>
+                            <%- partial('_partial/comment') %>
+                        </div>
+                    </div>
+                    <%- partial('_partial/sidenav') %>
+                </div>
+            </div>
+        </div>
+        <%- partial('_plugin/page-plugin') %>
+        
+    <noscript>
+        <div class="Alert">
+            <div class="container">
+                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+            </div>
+        </div>
+    </noscript>
+</main>
+</div>
+</body>
