@@ -62,3 +62,34 @@
 	display:flex;
 	flex-wrap:wrap
 }
+.dark .comments {
+	background:#1f2937;
+	color:#fff
+}
+.commments {
+	background:#fff;
+	border-radius:5px;
+	overflow:hidden;
+	color:#334155;
+	box-shadow:0 0 20px 0 rgb(0 0 0 / 8%)
+}
+* {
+	transition:all 1s,color 400ms,background 400ms,filter 300ms
+}
+.dark .card {
+	background:#1f2937;
+	color:#fff
+}
+.card {
+	background:#fff;
+	border-radius:5px;
+	overflow:hidden;
+	color:#334155;
+	box-shadow:0 0 20px 0 rgb(0 0 0 / 8%)
+}
+* {
+	transition:all 1s,color 400ms,background 400ms,filter 300ms
+}
+
+if hexo-config('plugins.TianliGPT.enable')
+  @import 'tianliGPT'

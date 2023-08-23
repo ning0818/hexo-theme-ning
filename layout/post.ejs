@@ -14,16 +14,14 @@ main>.card>div pre, main>.card>div span {
             <div class="container">
                 <div class="sideNavContainer">
                     <div class="IndexPage-results sideNavOffset">
-                        <div class="card">
+                        <div id="post">
+                        <div class="card" id="title">
                         <h1><%= page.title %></h1>
                         </div>
-                        <div class="card">
+                        <div class="card" id="post-body">
                         <p><%- page.content %></p>
                         </div>
-                        <% if (theme.TianliGPT.enable) { %>
-                            <%- partial('_partial/tianliGPT') %>
-                          <% } %>
-                        <div class="share card">
+                        <div class="share card" id="sharecard">
                             <link rel="stylesheet" class="nightmode" href="/css/copyright.css">
                             <div class="copyright">
                                 <i class="bi bi-c-circle icon"></i>
@@ -35,6 +33,7 @@ main>.card>div pre, main>.card>div span {
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <div class="card">
                             <h2><i class="bi bi-chat-fill"></i> 评论</h2>
                             <%- partial('_partial/comment') %>
@@ -44,9 +43,8 @@ main>.card>div pre, main>.card>div span {
                 </div>
             </div>
         </div>
-    <div id="flarum-loading" style="display: none;">
-        正在加载…
-    </div>
+        <%- partial('_plugin/plugin') %>
+        
     <noscript>
         <div class="Alert">
             <div class="container">
@@ -54,21 +52,6 @@ main>.card>div pre, main>.card>div span {
             </div>
         </div>
     </noscript>
-    <div class="App-composer">
-        <div class="container">
-            <div id="composer">
-                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
-                    <div class="Composer-handle" style="cursor: row-resize;"></div>
-                    <ul class="Composer-controls">
-                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
-                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
-                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
-                    </ul>
-                    <div class="Composer-content"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 </main>
 </div>
 </body>

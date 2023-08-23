@@ -5,7 +5,7 @@
 
 infor:
   logo: https://www.yuanning0818.tk/logo.png #徽标
-  qexourl: https://admin.ning0818.top
+  qexourl: https://admin.ning0818.top # qexo链接
   xieyi: 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)
   qexokey: #人机验证秘钥，没有的不填
 
@@ -16,9 +16,12 @@ friends:
   describe: 一个少年的博客
 
 #################################TianliGPT#################################
-TianliGPT:
-  enable: false
-  key: 5Q5mpqRK5DkwT1X9Gi5e
+plugins:
+  TianliGPT:
+    enable: true
+    key: 5Q5mpqRK5DkwT1X9Gi5e
+    wordLimit: 1000 # 摘要字数限制 (⚠️危险：更改此变量损失已消耗过的key，因为你提交的内容发生了变化。)
+    typewriter: true # 打字机效果
 
 #################################顶部导航栏#################################
 
