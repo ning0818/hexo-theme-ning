@@ -91,5 +91,11 @@
 	transition:all 1s,color 400ms,background 400ms,filter 300ms
 }
 
-if hexo-config('plugins.TianliGPT.enable')
-  @import 'tianliGPT'
+
+main .card {
+    padding: 30px;
+    margin: 8px;
+}
+main>.card>div pre, main>.card>div span {
+    width: 100%;background-color: #e2e2e2;padding: 10px;border-radius: 5px;overflow: auto;
+}

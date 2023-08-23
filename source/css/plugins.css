@@ -1,0 +1,2 @@
+if hexo-config('plugins.TianliGPT.enable')
+  @import 'tianliGPT'
