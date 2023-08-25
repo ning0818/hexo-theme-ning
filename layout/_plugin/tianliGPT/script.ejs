@@ -31,11 +31,11 @@
 </svg>`
       const aiTitleTextDiv = document.createElement('div');
       aiTitleTextDiv.className = 'tianliGPT-title-text';
-      aiTitleTextDiv.textContent = '智能摘要';
+      aiTitleTextDiv.textContent = '<%= __('plugins.tianliGPT.aititle') %>';
       aiTitleDiv.appendChild(aiTitleTextDiv);
       const aiExplanationDiv = document.createElement('div');
       aiExplanationDiv.className = 'tianliGPT-explanation';
-      aiExplanationDiv.innerHTML = 'AI 摘要生成中……' + '<span class="blinking-cursor"></span>';
+      aiExplanationDiv.innerHTML = '<%= __('plugins.tianliGPT.aiload') %>' + '<span class="blinking-cursor"></span>';
       aiDiv.appendChild(aiExplanationDiv); // 将 tianliGPT-explanation 插入到 aiDiv，而不是 aiTitleDiv
       // 将创建的元素插入到目标元素的顶部
       targetElement.insertBefore(aiDiv, targetElement.firstChild);
@@ -55,7 +55,7 @@
           const title = document.title;
           const container = document.querySelector(tianliGPT_postSelector);
           if (!container) {
-            console.warn('TianliGPT：找不到文章容器。请尝试将引入的代码放入到文章容器之后。如果本身没有打算使用摘要功能可以忽略此提示。');
+            console.warn('<%= __('plugins.tianliGPT.norq') %>');
             return '';
           }
           const paragraphs = container.getElementsByTagName('p');
@@ -77,16 +77,16 @@
           const truncatedText = combinedText.slice(0, wordLimit);
           return truncatedText;
         } catch (e) {
-          console.error('TianliGPT错误：可能由于一个或多个错误导致没有正常运行，原因出在获取文章容器中的内容失败，或者可能是在文章转换过程中失败。', e);
+          console.error('<%= __('plugins.tianliGPT.error') %>', e);
           return '';
         }
       },
       fetchTianliGPT: async function (content) {
         if (!tianliGPT_key) {
-          return "没有获取到key，代码可能没有安装正确。如果你需要在tianli_gpt文件引用前定义tianliGPT_key变量。详细请查看文档。";
+          return "<%= __('plugins.tianliGPT.errkey') %>";
         }
         if (tianliGPT_key === "5Q5mpqRK5DkwT1X9Gi5e") {
-          return "请购买 key 使用，如果你能看到此条内容，则说明代码安装正确。";
+          return "<%= __('plugins.tianliGPT.nokey') %>";
         }
         const apiUrl = `https://summary.tianli0.top/?content=${encodeURIComponent(content)}&key=${encodeURIComponent(tianliGPT_key)}`;
         const timeout = 20000; // 设置超时时间（毫秒）
@@ -103,7 +103,7 @@
                 el.style.display = 'none';
               });
             }
-            throw new Error('TianliGPT：余额不足，请充值后请求新的文章');
+            throw new Error('<%= __('plugins.tianliGPT.money') %>');
           }
         } catch (error) {
           if (error.name === 'AbortError') {

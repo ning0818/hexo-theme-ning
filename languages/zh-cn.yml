@@ -1,0 +1,15 @@
+main:
+  comments: 评论
+  nojs: 请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+  abbrlink: 本文永久链接是：
+  copyright: 博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
+plugins:
+  tianliGPT:
+    aititle: 智能摘要
+    aiload: AI 摘要生成中……
+    norq: TianliGPT：找不到文章容器。请尝试将引入的代码放入到文章容器之后。如果本身没有打算使用摘要功能可以忽略此提示。
+    error: TianliGPT错误：可能由于一个或多个错误导致没有正常运行，原因出在获取文章容器中的内容失败，或者可能是在文章转换过程中失败。
+    errkey: 没有获取到key，代码可能没有安装正确。如果你需要在tianli_gpt文件引用前定义tianliGPT_key变量。详细请查看文档。
+    nokey: 请购买 key 使用，如果你能看到此条内容，则说明代码安装正确。
+    money: TianliGPT：余额不足，请充值后请求新的文章
+  
