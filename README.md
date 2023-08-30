@@ -4,7 +4,7 @@
   <a title="English" href="/README_EN.md">English</a>
 </div>
 
-预览: 👍 [Ning](https://theme.yuanning0818.tk/)
+预览: 👍 [Ning](https://theme.ning0818.top/)
 
 文档: 📖 准备中...
 
@@ -45,7 +45,7 @@ cp -rf ./themes/Ning/_config.yml ./_config.Ning.yml
 - windows
   在博客根目录运行
 ```cmd
-copy themes\ning\_config.yml .\ && del themes\ning\_config.yml && ren _config.yml _config.Ning.yml
+ren themes\ning\_config.yml _config.Ning.yml && copy themes\ning\_config.Ning.yml .\ && ren themes\ning\_config.Ning.yml _config.yml
 ```
 
 ## 仓库统计
