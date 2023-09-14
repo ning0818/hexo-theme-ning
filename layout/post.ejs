@@ -9,10 +9,10 @@
                         <div class="card" id="title">
                         <h1><%= page.title %></h1>
                         </div>
-                        <% if (theme.plugins.NingGPT.enable) { %>
-                        <%- partial('_plugins/NingGPT/script') %>
-                        <% } %>
                         <div class="card" id="post-body">
+                        <% if (theme.plugins.NingGPT.enable) { %>
+                        <%- partial('_plugin/ningGPT/script') %>
+                        <% } %>
                         <p><%- page.content %></p>
                         </div>
                         <div class="share card" id="sharecard">
