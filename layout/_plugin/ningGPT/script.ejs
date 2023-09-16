@@ -11,7 +11,7 @@
                     </div>
                     <script>
                         function ai_summary() {
-                            Jian.console.debug(`AI摘要插件
+                            Ning.console.debug(`AI摘要插件
 API URL: <%- theme.plugins.NingGPT.link %>
 Key: <%- theme.plugins.NingGPT.key %>
 发送的内容: ` + (document.title + " " + document.getElementById("post").innerText.replaceAll("\n", " ")).substring(0, 201)),
@@ -25,5 +25,5 @@ Key: <%- theme.plugins.NingGPT.key %>
                                 document.getElementById("ai-summary").innerHTML = "代码出现故障：" + t
                             })
                         }
-                        Jian.onload.add(ai_summary)
+                        Ning.onload.add(ai_summary)
                     </script>
